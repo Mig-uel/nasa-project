@@ -1,5 +1,5 @@
 /* ---- Planets Model ---- */
-const planets = require('../../models/planets.model')
+const { planets } = require('../../models/planets.model')
 
 /* ---- Controllers ---- */
 function getAllPlanets(req, res) {
