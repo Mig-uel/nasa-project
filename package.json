@@ -1,0 +1,16 @@
+{
+  "name": "nasa-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Mig-uel/nasa-project.git",
+  "author": "",
+  "license": "MIT",
+  "scripts": {
+    "client": "cd client && yarn start",
+    "server": "cd server && yarn dev",
+    "dev": "concurrently 'yarn:client' 'yarn:server'"
+  },
+  "dependencies": {
+    "concurrently": "^7.3.0"
+  }
+}
