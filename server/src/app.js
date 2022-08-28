@@ -20,7 +20,7 @@ app.use(express.static(path.join(__dirname, '..', 'public'))) // serve public fo
 app.use('/api', planetsRouter)
 app.use('/api', launchesRouter)
 
-app.get('/', (req, res) => {
+app.get('/*', (req, res) => {
   res.send(path.join(__dirname, '..', 'public', 'index.html'))
 })
 
