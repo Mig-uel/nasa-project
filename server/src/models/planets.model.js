@@ -41,7 +41,12 @@ function loadPlanetsData() {
   })
 }
 
+function getAllPlanets() {
+  // returns planets to be consumed by controller
+  return habitablePlanets
+}
+
 module.exports = {
   loadPlanetsData,
-  planets: habitablePlanets,
+  getAllPlanets,
 }
