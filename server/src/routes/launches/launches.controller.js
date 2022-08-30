@@ -10,12 +10,7 @@ function httpAddNewLaunch(req, res) {
   const launch = req.body
 
   /* ---- Validation ---- */
-  if (
-    !launch.mission ||
-    !launch.rocket ||
-    !launch.launchDate ||
-    !launch.destination
-  )
+  if (!launch.mission || !launch.rocket || !launch.launchDate || !launch.target)
     return res.status(400).json({ error: 'All fields required!' })
 
   /* Convert Text Date to JS Date ---- */
