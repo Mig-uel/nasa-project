@@ -17,8 +17,8 @@ app.use(express.json()) // parse any JSON coming from incoming requests
 app.use(express.static(path.join(__dirname, '..', 'public'))) // serve public folders
 
 /* ---- Routes ---- */
-app.use('/api', planetsRouter)
-app.use('/api', launchesRouter)
+app.use('/api/planets', planetsRouter)
+app.use('/api/launches', launchesRouter)
 
 app.get('/*', (req, res) => {
   res.send(path.join(__dirname, '..', 'public', 'index.html'))
