@@ -16,6 +16,11 @@ const launch = {
 
 launches.set(launch.flightNumber, launch)
 
+/* ---- Find Existing Launch ---- */
+function existsLaunchWithId(launchId) {
+  return launches.has(launchId)
+}
+
 /* ---- Get All Launches ---- */
 function getAllLaunches() {
   // convert data to array for controller consumption
@@ -36,4 +41,19 @@ function addNewLaunch(launch) {
   )
 }
 
-module.exports = { getAllLaunches, addNewLaunch }
+/* ---- Abort/Delete a Launch ---- */
+function abortLaunchById(launchId) {
+  const aborted = launches.get(launchId)
+
+  aborted.upcoming = false
+  aborted.success = false
+
+  return aborted
+}
+
+module.exports = {
+  existsLaunchWithId,
+  getAllLaunches,
+  addNewLaunch,
+  abortLaunchById,
+}
