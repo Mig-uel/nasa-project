@@ -27,7 +27,7 @@ const launchesSchema = new mongoose.Schema({
   customers: {
     type: [String],
     required: true,
-  },                                                                                                                                                                                                                                                                                                                                            
+  },
   upcoming: {
     type: Boolean,
     required: true,
@@ -38,3 +38,6 @@ const launchesSchema = new mongoose.Schema({
     default: true,
   },
 })
+
+// connects launchesSchema with the "launches" collection
+module.export = mongoose.model('Launch', launchesSchema)
