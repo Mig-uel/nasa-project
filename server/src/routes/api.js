@@ -10,4 +10,4 @@ const api = express.Router()
 api.use('/api/planets', planetsRouter)
 api.use('/api/launches', launchesRouter)
 
-module.export = api
+module.exports = api
